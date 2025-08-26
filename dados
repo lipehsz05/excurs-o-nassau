@@ -1,0 +1,19 @@
+import random, time
+
+pos1 = pos2 = 0
+print("🏁 Corrida de Dados entre Jogador 1 e Jogador 2!")
+
+while pos1 < 30 and pos2 < 30:
+    input("\nPressione ENTER para rolar os dados...")
+    pos1 += random.randint(1, 6)
+    pos2 += random.randint(1, 6)
+    print(f"Jogador 1: {'-'*pos1}>")
+    print(f"Jogador 2: {'-'*pos2}>")
+    time.sleep(1)
+
+if pos1 >= 30 and pos2 >= 30:
+    print("\n🤝 Empate!")
+elif pos1 >= 30:
+    print("\n🎉 Jogador 1 venceu!")
+else:
+    print("\n🎉 Jogador 2 venceu!")
